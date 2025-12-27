@@ -1,8 +1,8 @@
-package com.hightech.ems.service;
+package com.zavx.ems.service;
 
-import com.hightech.ems.model.Role;
-import com.hightech.ems.model.User;
-import com.hightech.ems.repository.UserRepository;
+import com.zavx.ems.model.Role;
+import com.zavx.ems.model.User;
+import com.zavx.ems.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

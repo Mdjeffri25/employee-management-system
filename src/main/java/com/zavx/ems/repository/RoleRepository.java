@@ -1,6 +1,6 @@
-package com.hightech.ems.repository;
+package com.zavx.ems.repository;
 
-import com.hightech.ems.model.Role;
+import com.zavx.ems.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

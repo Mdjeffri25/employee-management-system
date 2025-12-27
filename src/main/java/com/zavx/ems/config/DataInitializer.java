@@ -1,9 +1,9 @@
-package com.hightech.ems.config;
+package com.zavx.ems.config;
 
-import com.hightech.ems.model.Role;
-import com.hightech.ems.model.User;
-import com.hightech.ems.repository.RoleRepository;
-import com.hightech.ems.repository.UserRepository;
+import com.zavx.ems.model.Role;
+import com.zavx.ems.model.User;
+import com.zavx.ems.repository.RoleRepository;
+import com.zavx.ems.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

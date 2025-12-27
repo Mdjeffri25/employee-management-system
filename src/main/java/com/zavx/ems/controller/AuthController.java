@@ -1,7 +1,7 @@
-package com.hightech.ems.controller;
+package com.zavx.ems.controller;
 
-import com.hightech.ems.model.User;
-import com.hightech.ems.service.UserService;
+import com.zavx.ems.model.User;
+import com.zavx.ems.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

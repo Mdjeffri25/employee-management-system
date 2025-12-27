@@ -1,6 +1,6 @@
-package com.hightech.ems.service;
+package com.zavx.ems.service;
 
-import com.hightech.ems.model.User;
+import com.zavx.ems.model.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;

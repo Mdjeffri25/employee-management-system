@@ -1,6 +1,6 @@
-package com.hightech.ems.config;
+package com.zavx.ems.config;
 
-import com.hightech.ems.service.UserService;
+import com.zavx.ems.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

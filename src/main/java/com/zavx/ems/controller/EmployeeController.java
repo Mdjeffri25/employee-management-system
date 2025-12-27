@@ -1,7 +1,7 @@
-package com.hightech.ems.controller;
+package com.zavx.ems.controller;
 
-import com.hightech.ems.model.Employee;
-import com.hightech.ems.service.EmployeeService;
+import com.zavx.ems.model.Employee;
+import com.zavx.ems.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

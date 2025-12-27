@@ -1,7 +1,7 @@
-package com.hightech.ems.service;
+package com.zavx.ems.service;
 
-import com.hightech.ems.model.Employee;
-import com.hightech.ems.repository.EmployeeRepository;
+import com.zavx.ems.model.Employee;
+import com.zavx.ems.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

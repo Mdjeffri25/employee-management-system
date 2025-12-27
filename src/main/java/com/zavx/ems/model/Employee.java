@@ -1,4 +1,4 @@
-package com.hightech.ems.model;
+package com.zavx.ems.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
