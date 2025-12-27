@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: zavx-ems
+    env: docker
+    plan: free
+    branch: main
+    healthCheckPath: /login
+    envVars:
+      - key: SERVER_PORT
+        value: 8080
