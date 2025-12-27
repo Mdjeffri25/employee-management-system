@@ -6,10 +6,19 @@
     <title>Login - ZAVX EMS</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
         .login-container {
+            width: 100%;
             max-width: 400px;
-            margin: 100px auto;
             text-align: center;
+            padding: 20px;
         }
 
         .login-btn {
@@ -35,6 +44,10 @@
             font-size: 0.9em;
         }
 
+        .otp-link:hover {
+            text-decoration: underline;
+        }
+
         .error-message {
             color: #ff4d4d;
             margin-bottom: 15px;
@@ -48,8 +61,8 @@
 </head>
 
 <body>
-    <div class="container login-container">
-        <h1>ZAVX Login</h1>
+    <div class="login-container">
+        <h1 style="margin-bottom: 2rem;">ZAVX Login</h1>
 
         <div class="glass-panel">
             <div th:if="${param.error}" class="error-message">
@@ -59,18 +72,17 @@
                 You have been logged out.
             </div>
             <div th:if="${param.otpSuccess}" class="logout-message">
-                OTP Verified! Loading dashboard... (Demo Mode: Please login with password now)
+                OTP Verified! Loading dashboard...
             </div>
 
             <form th:action="@{/login}" method="post">
-                <div class="form-group">
+                <div class="form-group" style="text-align: left;">
                     <label>Email</label>
                     <input type="text" name="username" placeholder="Enter Email" required autofocus>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="text-align: left;">
                     <label>Password</label>
-                    <input type="text" class="password-input" name="password" style="-webkit-text-security: disc;"
-                        placeholder="Enter Password" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
                 </div>
                 <button type="submit" class="btn btn-primary login-btn">Sign In</button>
             </form>
@@ -84,11 +96,13 @@
             </a>
         </div>
 
+        <!-- 
         <div style="font-size: 0.8em; color: #aaa; margin-top: 20px;">
             <p>Default Admin: admin@zavx.tech / admin123</p>
             <p>Default HR: hr@zavx.tech / hr123</p>
             <p>Default Employee: employee@zavx.tech / employee123</p>
-        </div>
+        </div> 
+        -->
     </div>
 </body>
 
