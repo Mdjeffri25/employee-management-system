@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Employee Management System</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <script th:src="@{/js/app.js}" defer></script>
 </head>
+
 <body>
     <div class="container">
         <h1>High-Tech Employee Dashboard</h1>
-        
+
         <div class="glass-panel">
             <a th:href="@{/showNewEmployeeForm}" class="btn btn-primary">Add New Employee</a>
         </div>
@@ -47,11 +49,11 @@
     <div class="chatbot-container">
         <div class="chatbot-window" id="chatbot-window">
             <div class="chatbot-header">
-                <span>AI Assistant</span>
+                <span>Virtual Assistant</span>
                 <span style="cursor: pointer;" onclick="toggleChatbot()">X</span>
             </div>
             <div class="chatbot-messages" id="chatbot-messages">
-                <div class="message bot-message">Hello! I am your AI HR Assistant. How can I help you?</div>
+                <div class="message bot-message">Hello! I am your Virtual HR Assistant. How can I help you?</div>
             </div>
             <div class="chatbot-input">
                 <input type="text" id="chatbot-input-field" placeholder="Ask something...">
@@ -59,8 +61,10 @@
             </div>
         </div>
         <div class="chatbot-toggle" onclick="toggleChatbot()">
-            <img src="https://img.icons8.com/fluency/48/000000/chatbot.png" alt="Chat" style="width: 30px; height: 30px;">
+            <img src="https://img.icons8.com/fluency/48/000000/chatbot.png" alt="Chat"
+                style="width: 30px; height: 30px;">
         </div>
     </div>
 </body>
+
 </html>

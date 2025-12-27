@@ -4,7 +4,7 @@ A High-Tech Employee Management System with a Chatbot, built using Spring Boot, 
 
 ## Features
 - **CRUD Operations**: Add, Update, Delete, View employees.
-- **Chatbot**: Built-in AI assistant for HR queries.
+- **Chatbot**: Built-in Virtual Assistant for HR queries.
 - **High-Tech UI**: Dark mode, glassmorphism, and responsive design.
 - **Dockerized**: Easy deployment.
 
