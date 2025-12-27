@@ -11,8 +11,8 @@
     <groupId>com.high-tech</groupId>
     <artifactId>employee-management-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>safx-employee-management-system</name>
-    <description>SAFX Employee Management System with Virtual Assistant</description>
+    <name>zavx-employee-management-system</name>
+    <description>ZAVX Employee Management System with Virtual Assistant</description>
     <properties>
         <java.version>17</java.version>
     </properties>
