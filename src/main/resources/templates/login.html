@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - EMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .login-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .google-btn {
+            background: #DB4437;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .google-btn:hover {
+            background: #c1351d;
+        }
+
+        .otp-link {
+            display: block;
+            margin-top: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .error-message {
+            color: #ff4d4d;
+            margin-bottom: 15px;
+        }
+
+        .logout-message {
+            color: #4caf50;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container login-container">
+        <h1>High-Tech Login</h1>
+
+        <div class="glass-panel">
+            <div th:if="${param.error}" class="error-message">
+                Invalid username or password.
+            </div>
+            <div th:if="${param.logout}" class="logout-message">
+                You have been logged out.
+            </div>
+            <div th:if="${param.otpSuccess}" class="logout-message">
+                OTP Verified! Loading dashboard... (Demo Mode: Please login with password now)
+            </div>
+
+            <form th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="username" placeholder="Enter Email" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="text" class="password-input" name="password" style="-webkit-text-security: disc;"
+                        placeholder="Enter Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn">Sign In</button>
+            </form>
+
+            <a th:href="@{/otp/request}" class="otp-link">Login with One-Time Password (OTP)</a>
+
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
+
+            <a href="/oauth2/authorization/google" class="btn btn-danger login-btn google-btn">
+                Sign in with Google
+            </a>
+        </div>
+
+        <div style="font-size: 0.8em; color: #aaa; margin-top: 20px;">
+            <p>Default Admin: admin@hightech.com / admin123</p>
+            <p>Default HR: hr@hightech.com / hr123</p>
+            <p>Default Employee: employee@hightech.com / employee123</p>
+        </div>
+    </div>
+</body>
+
+</html>

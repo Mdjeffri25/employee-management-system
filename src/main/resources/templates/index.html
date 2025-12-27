@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,21 @@
     <div class="container">
         <h1>High-Tech Employee Dashboard</h1>
 
-        <div class="glass-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div class="glass-panel" style="margin-bottom:0; padding: 10px 20px;">
+                <span>Welcome, <b sec:authentication="name">User</b>!</span>
+                <span class="badge" th:each="authority : ${#authentication.getAuthorities()}"
+                    th:text="${authority.authority}"
+                    style="font-size:0.8em; background:rgba(255,255,255,0.1); padding:2px 5px; border-radius:3px; margin-left:5px;"></span>
+            </div>
+            <div class="glass-panel" style="margin-bottom:0; padding:0;">
+                <form th:action="@{/logout}" method="post" style="margin:0;">
+                    <button type="submit" class="btn btn-danger" style="border-radius: 15px;">Logout</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="glass-panel" sec:authorize="hasAnyRole('ADMIN', 'HR')">
             <a th:href="@{/showNewEmployeeForm}" class="btn btn-primary">Add New Employee</a>
         </div>
 
@@ -35,9 +49,10 @@
                         <td th:text="${employee.role}"></td>
                         <td th:text="${employee.department}"></td>
                         <td th:text="${employee.salary}"></td>
-                        <td>
+                        <td sec:authorize="hasAnyRole('ADMIN', 'HR')">
                             <a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-warning">Edit</a>
-                            <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
+                            <a sec:authorize="hasRole('ADMIN')" th:href="@{/deleteEmployee/{id}(id=${employee.id})}"
+                                class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 </tbody>

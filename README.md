@@ -2,6 +2,17 @@
 
 A High-Tech Employee Management System with a Chatbot, built using Spring Boot, Hibernate, MySQL, and Thymeleaf.
 
+## Security Features (New)
+- **Authentication**: Secure Login with Email/Password (BCrypt Encrypted).
+- **Role-Based Access Control (RBAC)**:
+  - **Admin**: Full access (Add/Edit/Delete).
+  - **HR**: Manage employees (Add/Edit).
+  - **Employee**: Read-only access.
+- **Modern Auth**:
+  - **OAuth2**: Google Sign-In integration ready.
+  - **Passwordless**: OTP-based login concept.
+- **Session Management**: Secure session handling with logout.
+
 ## Features
 - **CRUD Operations**: Add, Update, Delete, View employees.
 - **Chatbot**: Built-in Virtual Assistant for HR queries.
