@@ -8,7 +8,7 @@
         <version>3.2.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.high-tech</groupId>
+    <groupId>com.zavx</groupId>
     <artifactId>employee-management-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>zavx-employee-management-system</name>
