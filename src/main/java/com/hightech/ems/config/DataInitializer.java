@@ -36,7 +36,7 @@ public class DataInitializer implements CommandLineRunner {
 
             // Initialize Default Admin
             User admin = new User();
-            admin.setEmail("admin@hightech.com");
+            admin.setEmail("admin@safx.tech");
             admin.setPassword(passwordEncoder.encode("admin123")); // Secure BCrypt Password
             admin.setRoles(Arrays.asList(adminRole, hrRole));
 
@@ -44,7 +44,7 @@ public class DataInitializer implements CommandLineRunner {
 
             // Initialize Default HR
             User hr = new User();
-            hr.setEmail("hr@hightech.com");
+            hr.setEmail("hr@safx.tech");
             hr.setPassword(passwordEncoder.encode("hr123"));
             hr.setRoles(Collections.singletonList(hrRole));
 
@@ -52,14 +52,14 @@ public class DataInitializer implements CommandLineRunner {
 
             // Initialize Default Employee
             User emp = new User();
-            emp.setEmail("employee@hightech.com");
+            emp.setEmail("employee@safx.tech");
             emp.setPassword(passwordEncoder.encode("employee123"));
             emp.setRoles(Collections.singletonList(empRole));
 
             userRepository.save(emp);
 
             System.out.println(
-                    "Default users created: admin@hightech.com, hr@hightech.com, employee@hightech.com (Password: <role>123)");
+                    "Default users created: admin@safx.tech, hr@safx.tech, employee@safx.tech (Password: <role>123)");
         }
     }
 }

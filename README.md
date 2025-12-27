@@ -1,6 +1,8 @@
-# Employee Management System
+# SAFX Employee Management System
 
-A High-Tech Employee Management System with a Chatbot, built using Spring Boot, Hibernate, MySQL, and Thymeleaf.
+> **Project Status**: 🚧 In Progress (Development)
+
+The **SAFX Employee Management System** is a modern enterprise application with a Virtual Assistant, built using Spring Boot, Hibernate, MySQL, and Thymeleaf.
 
 ## Security Features (New)
 - **Authentication**: Secure Login with Email/Password (BCrypt Encrypted).
